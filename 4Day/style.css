@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background-color: #e56262;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  aspect-ratio: 1/1;
+  width: 30vw;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.esferaOne {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 28px 28px 31px 10px rgba(0, 0, 0, 0.2);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  animation: escaleOne 4s linear infinite;
+}
+
+@keyframes escaleOne {
+  0% {
+    scale: 0;
+  }
+
+  20% {
+    scale: 1;
+  }
+
+  40% {
+    scale: 1;
+  }
+
+  60% {
+    scale: 1;
+  }
+
+  70% {
+    scale: 1;
+  }
+
+  90% {
+    scale: 0;
+  }
+
+  100% {
+    scale: 0;
+  }
+}
+
+.esferaTwo {
+  height: 50%;
+  width: 50%;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 28px 28px 31px 10px rgba(0, 0, 0, 0.2);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  animation: escaleTwo 4s linear infinite;
+}
+
+@keyframes escaleTwo {
+  0% {
+    scale: 0;
+  }
+
+  15% {
+    scale: 0;
+  }
+
+  30% {
+    scale: 1;
+  }
+
+  60% {
+    scale: 1;
+  }
+
+  85% {
+    scale: 0;
+  }
+
+  100% {
+    scale: 0;
+  }
+
+}
+
+.esferaThree {
+  height: 50%;
+  width: 50%;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 28px 28px 31px 10px rgba(0, 0, 0, 0.2);
+
+
+
+  animation: escaleThree 4s linear infinite;
+}
+
+@keyframes escaleThree {
+  0% {
+    scale: 0;
+  }
+
+  30% {
+    scale: 0;
+  }
+
+  40% {
+    scale: 1;
+  }
+
+  55% {
+    scale: 1;
+  }
+
+  70% {
+    scale: 0;
+  }
+
+  100% {
+    scale: 0;
+  }
+
+}
