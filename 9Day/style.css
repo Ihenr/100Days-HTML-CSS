@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  box-shadow: 1px 2px 10px 0 rgba(0, 0, 0, 0.247);
+  background: #1a2238;
+  font-weight: 300;
+  overflow: hidden;
+  color: #394568;
+
+  border-radius: 10px;
+}
+
+/* Luna */
+.moon {
+  position: absolute;
+  width: 67px;
+  height: 67px;
+  top: 45px;
+  left: 55px;
+
+  border-radius: 50%;
+  background-color: #f6edbd;
+  overflow: hidden;
+  box-shadow: 0 0 10px #f6edbd;
+  animation: rise 1s ease-in-out;
+}
+
+@keyframes rise {
+  from {
+    transform: translate(-20px, 200px);
+  }
+
+  to {
+    transform: translate(0, 0);
+  }
+}
+
+.crater-1,
+.crater-2,
+.crater-3,
+.crater-4 {
+  position: absolute;
+  width: 11px;
+  height: 11px;
+
+  top: 9px;
+  left: 28px;
+  border-radius: 50%;
+  background-color: #ece1a8;
+}
+
+.crater-1 {
+  top: 24px;
+  left: 41px;
+}
+
+.crater-2 {
+  top: 12px;
+  left: 0;
+}
+
+.crater-3 {
+  top: 50px;
+  left: 10px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+/* Luna */
+
+/* Hill */
+.hill-bg-1,
+.hill-bg-2,
+.hill-fg-1,
+.hill-fg-2,
+.hill-fg-3 {
+  position: absolute;
+  z-index: 2;
+  width: 337px;
+  height: 281px;
+  top: 201px;
+  left: -57px;
+  background-color: #26314f;
+  border-radius: 50%;
+}
+
+.hill-bg-2 {
+  top: 197px;
+  left: 177px;
+}
+
+.hill-fg-1,
+.hill-fg-2,
+.hill-fg-3 {
+  background-color: #303c5d;
+  top: 248px;
+  left: -137px;
+}
+
+.hill-fg-2 {
+  top: 221px;
+  left: 63px;
+}
+
+.hill-fg-3 {
+  top: 248px;
+  left: 292px;
+}
+
+
+/* Hill */
+
+/* Info */
+.front {
+  position: absolute;
+  z-index: 10;
+  width: 400px;
+  height: 90px;
+  left: 0;
+  bottom: 0;
+  background-color: #fff;
+}
+
+.temperature {
+  float: left;
+  margin-left: 20px;
+  font-size: 45px;
+  line-height: 90px;
+}
+
+.info {
+  float: left;
+  margin: 25px 0 0 13px;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.preview {
+  float: right;
+  font-weight: 400;
+  text-align: right;
+  font-size: 15px;
+  line-height: 20px;
+  margin: 25px 20px 0 0;
+}
+
+.preview td {
+  padding: 0 3px;
+  text-transform: uppercase;
+}
+
+.preview td:first-child {
+  font-weight: 300;
+}
+
+/* Info */
+
+/* Lluvia */
+.drop-big-1,
+.drop-medium-1,
+.drop-small-1 {
+  position: absolute;
+  z-index: 20;
+  left: 350px;
+  bottom: 90px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #7fc1f9;
+  animation: drop .9s linear 1.08s infinite;
+  animation-fill-mode: both;
+  transform-origin: 50% 100%;
+}
+
+.big-2 {
+  left: 250px;
+  animation: drop .8s linear 1.06s infinite;
+}
+
+.big-3 {
+  left: 150px;
+  animation: drop .6s linear 2s infinite;
+}
+
+.big-4 {
+  left: 100px;
+  animation: drop .9s linear 1.08s infinite;
+}
+
+.big-5 {
+  left: 20px;
+  animation: drop .6s linear 2s infinite;
+}
+
+.big-6 {
+  left: -20px;
+  animation: drop .9s linear 1.08s infinite;
+}
+
+.drop-big-1::before,
+.drop-medium-1::before,
+.drop-small-1::before {
+  content: '';
+  position: absolute;
+  display: block;
+  top: -2px;
+  left: 1px;
+  width: 6px;
+  height: 6px;
+  background-color: #7fc1f9;
+  border-radius: 50%;
+}
+
+.drop-big-1::after,
+.drop-medium-1::after,
+.drop-small-1::after {
+  content: '';
+  position: absolute;
+  display: block;
+  top: -5px;
+  left: 2px;
+  width: 4px;
+  height: 10px;
+  background-color: #7fc1f9;
+  border-radius: 50%;
+}
+
+.drop-medium-1 {
+  left: 180px;
+  opacity: .5;
+  width: 6px;
+  height: 6px;
+  animation: drop 1.5s linear .24s infinite;
+}
+
+.medium-2 {
+  left: 270px;
+  opacity: .6;
+  animation: drop 1.3s linear .20s infinite;
+}
+
+.medium-3 {
+  left: 100px;
+  opacity: .6;
+  animation: drop 1s linear .28s infinite;
+}
+
+.medium-4 {
+  left: 30px;
+  opacity: .6;
+  animation: drop 1.5s linear .24s infinite;
+}
+
+
+.drop-medium-1::before {
+  top: -2px;
+  left: 1px;
+  width: 4px;
+  height: 4px;
+}
+
+.drop-medium-1::after {
+  top: -4px;
+  left: 2px;
+  width: 2px;
+  height: 6px;
+}
+
+.drop-small-1 {
+  left: 30px;
+  opacity: .3;
+  width: 4px;
+  height: 4px;
+  animation: drop 2s linear 1.3s infinite;
+}
+
+.small-2 {
+  left: 140px;
+  animation: drop 1.7s linear 1s infinite;
+}
+
+.small-3 {
+  left: 179px;
+  animation: drop 2s linear 1.3s infinite;
+}
+
+.small-4 {
+  left: 276px;
+  animation: drop 1.7s linear 1s infinite;
+}
+
+.drop-small-1::before {
+  top: -2px;
+  left: 1px;
+  width: 2px;
+  height: 2px;
+}
+
+.drop-small-1::after {
+  top: -3px;
+  left: 1px;
+  width: 2px;
+  height: 4px;
+}
+
+
+@keyframes drop {
+  0% {
+    transform: translate3d(40px, -320px, 0) scaleX(1) scaleY(1) rotate(17deg);
+  }
+
+  85% {
+    transform: translate3d(0, 0, 0) scaleX(1) scaleY(1) rotate(17deg);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) scaleX(3) scaleY(0) rotate(0);
+  }
+}
+
+/* Lluvia */
