@@ -51,7 +51,9 @@
 .crater-1,
 .crater-2,
 .crater-3,
-.crater-4 {
+.crater-4,
+.crater-5,
+.crater-6 {
   position: absolute;
   width: 11px;
   height: 11px;
@@ -77,6 +79,22 @@
   left: 10px;
   width: 8px;
   height: 8px;
+  border-radius: 50%;
+}
+
+.crater-5 {
+  top: 20px;
+  left: 13px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.crater-6 {
+  top: 40px;
+  left: 30px;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
 }
 
