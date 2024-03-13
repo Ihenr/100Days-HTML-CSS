@@ -1,0 +1,185 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+
+  display: grid;
+  place-items: center;
+
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1000%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='%230e2a47'%3e%3c/rect%3e%3cpath d='M0%2c305.954C68.321%2c314.348%2c142.944%2c349.667%2c202.139%2c314.535C261.304%2c279.421%2c264.546%2c196.419%2c291.334%2c133.048C317.247%2c71.746%2c354.555%2c15.219%2c356.783%2c-51.298C359.276%2c-125.754%2c347.997%2c-203.388%2c304.629%2c-263.962C259.467%2c-327.043%2c191.968%2c-386.682%2c114.449%2c-389.778C37.834%2c-392.838%2c-14.178%2c-315.095%2c-82.041%2c-279.405C-133.708%2c-252.232%2c-189.769%2c-239.819%2c-236.701%2c-205.102C-294.335%2c-162.468%2c-371.91%2c-125.841%2c-384.929%2c-55.344C-397.921%2c15.003%2c-339.099%2c77.125%2c-299.869%2c136.946C-265.712%2c189.031%2c-226.815%2c237.917%2c-172.554%2c268.499C-120.22%2c297.995%2c-59.626%2c298.628%2c0%2c305.954' fill='%230b2239'%3e%3c/path%3e%3cpath d='M1440 1213.721C1564.569 1209.516 1700.91 1191.484 1789.454 1103.762 1874.683 1019.3240000000001 1837.696 873.419 1891.651 766.262 1948.949 652.467 2122.165 590.388 2111.889 463.397 2101.777 338.437 1948.208 281.043 1846.459 207.80200000000002 1765.137 149.265 1677.005 108.476 1580.648 80.99700000000001 1484.98 53.714999999999975 1389.337 43.948999999999955 1289.989 49.11099999999999 1164.452 55.634000000000015 1018.235 29.118000000000052 926.43 114.98899999999998 834.657 200.82999999999998 839.644 347.613 836.55 473.23699999999997 833.727 587.865 870.255 694.533 909.505 802.269 952.0450000000001 919.0360000000001 976.847 1051.713 1075.047 1127.877 1175.838 1206.051 1312.519 1218.024 1440 1213.721' fill='%23113255'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1000'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center
+}
+
+.container {
+  height: 400px;
+  width: 400px;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0 rgba(0, 0, 0, 0.301);
+  background-color: rgb(76, 76, 76);
+  color: #fff;
+  font-family: "Open Sans", Helvetica, sans-serif;
+
+  position: relative;
+}
+
+.circulo {
+  position: absolute;
+  width: 212px;
+  height: 212px;
+  top: 87px;
+  left: 87px;
+  background-color: rgb(36, 36, 36);
+  border: 7px solid rgb(58, 58, 58);
+  border-radius: 50%;
+  text-align: center;
+
+  display: grid;
+  place-items: center;
+}
+
+.esfera {
+  position: absolute;
+  height: 62%;
+  width: 62%;
+  transform: rotate(calc(5deg * var(--esfera)));
+}
+
+.puntos_1 {
+  height: 2%;
+  width: 2%;
+  position: absolute;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.puntos_2 {
+  height: 2%;
+  width: 2%;
+  right: 0;
+  position: absolute;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.puntos_3 {
+  height: 2%;
+  width: 2%;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.puntos_4 {
+  height: 2%;
+  width: 2%;
+  bottom: 0;
+  position: absolute;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.spinner {
+  position: absolute;
+  width: 203px;
+  height: 202px;
+  border-radius: 50%;
+  top: 5px;
+  left: 5px;
+}
+
+.spinner circle {
+  fill: none;
+  stroke: #f85b5b;
+  stroke-width: 3;
+  stroke-dasharray: 625;
+  animation: spinner 5s linear infinite;
+  transform-origin: center center;
+  transform: rotate(-90deg);
+}
+
+@keyframes spinner {
+  from {
+    stroke-dashoffset: 625;
+    transform: rotate(-90deg) scaleY(1);
+  }
+
+  50% {
+    stroke-dashoffset: 0;
+    transform: rotate(-90deg) scaleY(1);
+  }
+
+  50.001% {
+    transform: rotate(-90deg) scaleY(-1);
+  }
+
+  to {
+    stroke-dashoffset: 625;
+    transform: rotate(-90deg) scaleY(-1);
+  }
+}
+
+
+.fecha {
+  position: absolute;
+  top: 68px;
+  width: 100%;
+  font-size: 12px;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+
+.time {
+  position: absolute;
+  top: 80px;
+  width: 100%;
+  font-weight: 700;
+  line-height: 100%;
+  margin: 4px 0;
+  font-size: 40px;
+}
+
+.beat {
+  position: absolute;
+  top: 129px;
+  left: 57px;
+  font-size: 12px;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+
+.energy {
+  position: absolute;
+  top: 129px;
+  left: 95px;
+  font-size: 12px;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+
+.bxs-heart {
+  animation: latido .4s ease-in-out infinite;
+}
+
+@keyframes latido {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+
+}
