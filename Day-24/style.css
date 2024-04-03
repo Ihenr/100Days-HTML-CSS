@@ -27,7 +27,7 @@ body {
   color: #fff;
   border-radius: 8px;
   font-family: "Open Sans", sans-serif;
-  box-shadow: 1px 2px 10px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 1px 2px 10px 0 rgba(0, 0, 0, 0.2);
 
 
 }
@@ -57,7 +57,7 @@ body {
 }
 
 .button:hover {
-  background-color: #37be77;
+  background: #37be77;
 }
 
 .button img {
@@ -102,6 +102,7 @@ input:checked~.circle {
     width: 260px;
     left: 70px;
     border-color: #fff;
+    color: #fff;
   }
 
   50% {
@@ -112,7 +113,7 @@ input:checked~.circle {
     width: 60px;
     left: 170px;
     border-color: #45b078;
-    background-color: transparent;
+    background: transparent;
     color: transparent;
   }
 }
@@ -126,6 +127,7 @@ input:checked~.circle {
     stroke-dashoffset: 0;
     stroke-dasharray: 183;
     transform: rotate(-90deg) scale(1);
+    opacity: 1;
   }
 
   90%,
@@ -148,11 +150,11 @@ input:checked~.circle {
 
 @keyframes fill {
   0% {
-    background-color: transparent;
-    color: #fff;
+    background: transparent;
+    border-color: #fff;
   }
 
   100% {
-    background-color: #fff;
+    background: #fff;
   }
 }
