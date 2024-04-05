@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(to right, #efefbb, #d4d3dd);
+}
+
+.container {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 8px;
+  box-shadow: 10px 10px 23px -7px rgba(0, 0, 0, 0.75);
+  background: linear-gradient(54deg, rgba(253, 163, 49, 1) 0%, rgba(253, 199, 49, 1) 100%);
+  color: #497081;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.list {
+  position: absolute;
+  width: 240px;
+  height: 280px;
+  top: 60px;
+  left: 80px;
+  background-color: #FFF;
+  box-shadow: 8px 5px 12px -7px rgba(0, 0, 0, 0.39);
+  border-radius: 3px;
+
+}
+
+.head {
+  padding: 20px 0;
+  margin: 0 30px;
+  border-bottom: 1px solid #d4dce0;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  padding: 4px 0;
+  margin: 0 30px;
+}
+
+li {
+  position: relative;
+  display: block;
+  margin: 24px 0;
+  height: 14px;
+}
+
+.text {
+  float: left;
+  font-size: 13px;
+  line-height: 14px;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+.button {
+  position: relative;
+  z-index: 2;
+  box-sizing: border-box;
+  float: right;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #497081;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all .3s ease-in-out .5s;
+}
+
+.checkmark {
+  position: absolute;
+  top: 2px;
+  right: 0;
+  stroke: #c8d4d9;
+  stroke-width: 1.5;
+  stroke-dasharray: 30 30;
+  stroke-dashoffset: 30;
+  transition: all .5s ease-in-out;
+  fill: none;
+}
+
+input {
+  display: none;
+}
+
+input:checked~.text {
+  color: #c8d4d9;
+}
+
+input:checked~.button {
+  transition: all .4s ease-in-out;
+  transform: scale(1.5);
+  opacity: 0;
+}
+
+input:checked~.checkmark {
+  transition: all .5s ease-in-out .4s;
+  stroke-dashoffset: 0;
+
+}
