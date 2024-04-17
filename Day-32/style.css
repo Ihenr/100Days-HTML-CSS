@@ -1,0 +1,111 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  height: 400px;
+  width: 400px;
+  border-radius: 8px;
+  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.3);
+  background: #FDB03A;
+  background: linear-gradient(to top right, #D2592A 0%, #FDB03A 100%);
+  display: grid;
+  place-items: center;
+}
+
+.counter {
+  position: absolute;
+  height: 40px;
+  width: 130px;
+  background-color: #FFF;
+  border-radius: 20px;
+  box-shadow: 4px 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+.minus {
+  position: absolute;
+  z-index: 10;
+  width: 32px;
+  height: 32px;
+  top: 4px;
+  left: 5px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all .3s ease-in-out;
+}
+
+.line {
+  position: absolute;
+  height: 2px;
+  width: 18px;
+  left: 7px;
+  top: 15px;
+  background-color: #e26e6e;
+  transition: all .3s ease-in-out;
+}
+
+.minus:hover {
+  background-color: #e26e6e;
+}
+
+.minus:hover .line {
+  background-color: #FFF;
+}
+
+.plus {
+  position: absolute;
+  z-index: 10;
+  width: 32px;
+  height: 32px;
+  top: 4px;
+  right: 5px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all .3s ease-in-out;
+}
+
+.line-h {
+  position: absolute;
+  height: 2px;
+  width: 18px;
+  left: 7px;
+  top: 15px;
+  background-color: #8ed273;
+  transition: all .3s ease-in-out;
+}
+
+.line-v {
+  position: absolute;
+  height: 18px;
+  width: 2px;
+  left: 15px;
+  top: 7px;
+  background-color: #8ed273;
+  transition: all .3s ease-in-out;
+}
+
+.plus:hover {
+  background-color: #8ed273;
+}
+
+.plus:hover .line-v,
+.plus:hover .line-h {
+  background-color: #FFF;
+}
+
+.number {
+  width: 130px;
+  height: 40px;
+  font-weight: 600;
+  font-size: 20px;
+  color: #6A85A0;
+  line-height: 40px;
+  text-align: center;
+}
