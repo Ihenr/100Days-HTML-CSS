@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(to right, #8e9eab, #eef2f3);
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background-color: #4a627a;
+  color: #FFF;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .5);
+}
+
+.menu-icon {
+  z-index: 2;
+  width: 50px;
+  height: 26px;
+  cursor: pointer;
+}
+
+.line-top,
+.line-bottom {
+  width: 50px;
+  height: 4px;
+  background-color: #FFF;
+  margin-bottom: 20px;
+  animation: line-top-close 1s ease both;
+}
+
+@keyframes line-top-close {
+  0% {
+    transform: translate3d(0, -20px, 0)scaleY(.5) scaleX(6);
+  }
+
+  60% {
+    transform: translate3d(0, -20PX, 0)scaleY(.5) scaleX(1);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0)scaleY(1) scaleX(1);
+  }
+}
+
+.line-bottom {
+  animation: line-bottom-close 1s ease both;
+}
+
+@keyframes line-bottom-close {
+  0% {
+    transform: translate3d(0, 20px, 0)scaleY(.5) scaleX(6);
+  }
+
+  60% {
+    transform: translate3d(0, 20PX, 0)scaleY(.5) scaleX(1);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0)scaleY(1) scaleX(1);
+  }
+}
+
+.menu-icon.active .line-top {
+  animation: line-top-open 1s ease both;
+}
+
+@keyframes line-top-open {
+  0% {
+    transform: translate3d(0, 0, 0) scaleY(1) scaleX(1);
+  }
+
+  20% {
+    transform: translate3d(0, 3px, 0) scaleY(1) scaleX(1);
+  }
+
+  40% {
+    transform: translate3d(0, -20px, 0) scaleY(.5) scaleX(1);
+  }
+
+  100% {
+    transform: translate3d(0, -20px, 0) scaleY(1) scaleX(6);
+  }
+}
+
+.menu-icon.active .line-bottom {
+  animation: line-bottom-open 1s ease both;
+}
+
+@keyframes line-bottom-open {
+  0% {
+    transform: translate3d(0, 0, 0) scaleY(1) scaleX(1);
+  }
+
+  20% {
+    transform: translate3d(0, -3px, 0) scaleY(1) scaleX(1);
+  }
+
+  40% {
+    transform: translate3d(0, 20px, 0) scaleY(.5) scaleX(1);
+  }
+
+  100% {
+    transform: translate3d(0, 20px, 0) scaleY(1) scaleX(6);
+  }
+}
+
+
+.menu {
+  position: absolute;
+  width: 300px;
+  height: 20px;
+  top: 190px;
+  left: 50px;
+  padding: 0 10px;
+  opacity: 0;
+  transition: all .5s ease-in-out;
+}
+
+.menu.active {
+  opacity: 1;
+  transition: all .5 s ease-in-out .5s;
+}
+
+ul {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  list-style: none;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 600;
+  width: 280px;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+ul li:hover {
+  cursor: pointer;
+  opacity: .6;
+}
