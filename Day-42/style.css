@@ -1,0 +1,185 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #8e9eab, #eef2f3);
+}
+
+.container {
+  width: 400px;
+  height: 400px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background-color: #c0c0c0;
+}
+
+.sky {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #1d4253 0%, #6bb5c4 100%);
+  overflow: hidden;
+}
+
+.star {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  border-radius: 1px;
+  background-color: #FFF;
+}
+
+.star-1 {
+  top: 151px;
+  left: 176px;
+  animation: 2.9s flickr infinite;
+}
+
+.star-2 {
+  top: 101px;
+  left: 236px;
+  animation: 2.5s flickr infinite;
+}
+
+.star-3 {
+  top: 50px;
+  left: 45px;
+  animation: 2.9s flickr infinite;
+}
+
+.star-4 {
+  top: 200px;
+  left: 60px;
+  animation: 1.5s flickr infinite;
+}
+
+.star-5 {
+  top: 159px;
+  left: 100px;
+  animation: 3s flickr infinite;
+}
+
+.star-6 {
+  top: 100px;
+  left: 120px;
+  animation: 1.5s flickr infinite;
+}
+
+.star-7 {
+  top: 200px;
+  left: 250px;
+  animation: 2s flickr infinite;
+}
+
+.star-8 {
+  top: 30px;
+  left: 180px;
+  animation: 3.2s flickr infinite;
+}
+
+.star-9 {
+  top: 120px;
+  left: 40px;
+  animation: 1s flickr infinite;
+}
+
+.star-10 {
+  top: 220px;
+  left: 140px;
+  animation: 2.9s flickr infinite;
+}
+
+.star-11 {
+  top: 110px;
+  left: 180px;
+  animation: 2.9s flickr infinite;
+}
+
+.star-12 {
+  top: 210px;
+  left: 180px;
+  animation: 2.2s flickr infinite;
+}
+
+.star-13 {
+  top: 190px;
+  left: 280px;
+  animation: 3.6s flickr infinite;
+}
+
+.star-14 {
+  top: 40px;
+  left: 100px;
+  animation: 3s flickr infinite;
+}
+
+.star-15 {
+  top: 60px;
+  left: 130px;
+  animation: 3s flickr infinite;
+}
+
+@keyframes flickr {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.2;
+  }
+}
+
+.shooting-start {
+  position: absolute;
+  top: 0;
+  left: -130px;
+  width: 120px;
+  height: 2px;
+  background-image: url("shooting-star.png");
+  background-size: 100%;
+  transform: rotate(20deg);
+}
+
+.shooting-start-1 {
+  top: -5px;
+  animation: 10s shooting-star infinite;
+}
+
+.shooting-start-2 {
+  top: 50px;
+  animation: 11s shooting-star infinite;
+}
+
+.shooting-start-3 {
+  top: 64px;
+  animation: 13s shooting-star infinite;
+}
+
+.shooting-start-4 {
+  top: 30px;
+  animation: 16s shooting-star infinite;
+}
+
+@keyframes shooting-star {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(20deg);
+
+  }
+
+  30%,
+  100% {
+    transform: translate3d(451px, 164px, 0) rotate(20deg);
+  }
+}
