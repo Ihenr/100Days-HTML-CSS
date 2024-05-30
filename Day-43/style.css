@@ -1,0 +1,56 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(to right, #8e9eab, #eef2f3);
+}
+
+.container {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.3);
+  background-color: #404556;
+  border-radius: 10PX;
+}
+
+#bulb {
+  position: absolute;
+  z-index: 2;
+  top: 134px;
+  left: 162px;
+  fill: #fff35c
+}
+
+#bulb:hover {
+  fill: #8c8f99;
+  cursor: pointer;
+}
+
+#glow {
+  position: absolute;
+  width: 76px;
+  height: 76px;
+  background-color: #fff35c;
+  border-radius: 50px;
+  box-shadow: 0 0 50px 10px #fff35c;
+  top: 134px;
+  left: 162px;
+  transition: .5s ease-in-out;
+}
+
+#bulb:hover~#glow {
+  opacity: 0;
+}
+
+#base {
+  position: absolute;
+  top: 233px;
+  left: 184px;
+  fill: #e5e5e5;
+}
