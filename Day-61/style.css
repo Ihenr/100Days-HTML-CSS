@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  height: 400px;
+  width: 400px;
+  background: linear-gradient(135deg, #4ad7b8 0%, #f39c12 100%);
+  animation: coloranimation 8s linear infinite;
+  border-radius: 20px;
+  box-shadow: 12px 12px 24px #d9d9d9, -12px -12px 24px #ffffff;
+}
+
+@keyframes coloranimation {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+
+  100% {
+    filter: hue-rotate(360deg);
+  }
+
+}
