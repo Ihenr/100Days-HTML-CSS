@@ -1,0 +1,56 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  position: relative;
+  height: 400px;
+  width: 400px;
+  border-radius: 2px;
+  background-color: #512626;
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+}
+
+.card {
+  box-sizing: border-box;
+  position: relative;
+  float: left;
+  width: 200px;
+  height: 200px;
+  background-color: #e27474;
+  transition: all .3s ease-in-out;
+  text-align: center;
+  padding-top: 55px;
+  cursor: pointer;
+}
+
+.card .text {
+  display: block;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+}
+
+.card .number {
+  display: block;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 100%;
+}
+
+.card:hover {
+  box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.2);
+  transform: scale(.95);
+}
