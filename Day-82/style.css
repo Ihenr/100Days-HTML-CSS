@@ -1,0 +1,63 @@
+body {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.container {
+    width: 400px;
+    height: 400px;
+    background-color: #bdcebd;
+    border-radius: 12px;
+    box-shadow:  8px 10px 10px rgba(0, 0, 0, 0.1);
+    color: #FFFFFF;
+    font-family: Arial, Helvetica, sans-serif;
+    perspective: 150px;
+    display: grid;
+    place-items: center;
+}
+
+.btn {
+    display: none;
+}
+
+.button {
+    width: 100px;
+    height: 50px;
+    border-radius: 25px;
+    text-align: center;
+    line-height: 46px;
+    text-transform: uppercase;
+    font-weight: 600;
+    transform-style: preserve-3d;
+    transition:  all 0.5s ease-in-out;
+    cursor: pointer;
+    box-shadow: 4px 8px 12px rgba(0, 0, 0, 0.1);
+}
+.front, .back {
+    box-sizing: border-box;
+    position: absolute;
+    display: block;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: #34495e;
+    background-color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    border-radius: 25px;
+    backface-visibility: hidden;
+    transform: rotateX(0);
+}
+.back {
+    z-index: 1;
+    color: #FFFFFF;
+    background-color: #64c760;
+    border: 2px solid #FFFFFF;
+    transform: rotateX(180deg);
+}
+.btn:checked + .button {
+    transform: rotateX(180deg);
+    box-shadow: 4px -8px 12px rgba(0, 0, 0, 0.1);
+}
